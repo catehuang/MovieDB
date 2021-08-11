@@ -10,6 +10,10 @@ public class MovieManagementSystem {
 	String sqlQuery;
 	Scanner in = new Scanner(System.in);
 
+	/**
+	 * Main menu
+	 * @throws SQLException if there is something wrong with SQL database
+	 */
 	public void displayMenu() throws SQLException {
 		System.out.println("Jim's Movie Manager");
 		System.out.println("1\tAdd New Movie");
@@ -21,6 +25,10 @@ public class MovieManagementSystem {
 		System.out.printf("Enter an option: ");
 	}
 
+	/**
+	 * Insert a new movie into database
+	 * @throws SQLException if there is something wrong with SQL database
+	 */
 	public void addMovie() throws SQLException {
 		md.connect();
 
@@ -50,6 +58,10 @@ public class MovieManagementSystem {
 		md.disconnect();
 	}
 
+	/**
+	 * Print out those movies in a specific year
+	 * @throws SQLException if there is something wrong with SQL database
+	 */
 	public void printMoviesInYear() throws SQLException {
 		int totalDuration = 0;
 		md.connect();
@@ -88,6 +100,10 @@ public class MovieManagementSystem {
 		return;
 	}
 
+	/**
+	 * Show random movies from database and a user can set the number of the random movies
+	 * @throws SQLException if there is something wrong with SQL database
+	 */
 	public void printRandomMovies() throws SQLException {
 		int totalDuration = 0;
 		md.connect();
@@ -123,6 +139,10 @@ public class MovieManagementSystem {
 		md.disconnect();
 	}
 
+	/**
+	 * Delete a movie from database
+	 * @throws SQLException if there is something wrong with SQL database
+	 */
 	public void deleteMovie() throws SQLException {
 		md.connect();
 		
